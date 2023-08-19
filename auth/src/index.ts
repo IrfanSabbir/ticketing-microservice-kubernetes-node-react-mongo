@@ -24,7 +24,6 @@ app.get("/api/users/test", (req: Request, res: Response) => {
 
 
 app.all('*', async (req, res) => {
-  console.log("not found here")
   throw new NotFoundError();
 });
 
