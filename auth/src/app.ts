@@ -6,8 +6,8 @@ import { currentUserRouter } from './routes/current-user';
 import { signinRouter } from './routes/signin';
 import { signoutRouter } from './routes/signout';
 import { signupRouter } from './routes/signup';
-import { errorHandler } from './middlewares/error-handler';
-import { NotFoundError } from './errors/not-found-error';
+// import { errorHandler } from '@irftickets/common';
+import { NotFoundError, errorHandler } from '@irftickets/common';
 
 
 const app: Express = express();
