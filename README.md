@@ -15,3 +15,8 @@ chorme locally run issue
 
 # Adding Global secret value to access in different service
 ## => kubectl create secret generic jwt-secret --fromm-literal=JWT_KEY=ASDHSECRETKEY
+
+# Namespace
+
+## => kubectl get namespace
+## => kubectl get service -n name-of-the-namespace (-n ingress-nginx)
