@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(
   cookieSession({
     signed: false,
-    secure: true,
+    secure: process.env.NODE_ENV !== 'test'
   })
 );
 
@@ -24,11 +24,6 @@ app.use(currentUserRouter);
 app.use(signinRouter);
 app.use(signoutRouter);
 app.use(signupRouter);
-app.get("/api/users/test", (req: Request, res: Response) => {
-  res.status(200).json({
-    message: "Test api call for auth success"
-  })
-});
 
 app.all('*', async (req, res) => {
   throw new NotFoundError();
