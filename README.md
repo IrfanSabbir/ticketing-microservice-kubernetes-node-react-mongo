@@ -20,3 +20,36 @@ chorme locally run issue
 
 ## => kubectl get namespace
 ## => kubectl get service -n name-of-the-namespace (-n ingress-nginx)
+
+
+# New Docker build and docker hub image push
+## => docker build -t irfanuddin/tickets . (irfanuddin: docker hub user name, ticket image name)
+## => docker push irfanuddin/tickets
+
+
+# Update common package to npm
+### Go to the common project directory and run
+## => npm run pub
+### And update the package in other services by running
+## => npm update @irftickets/common
+
+# Add new proejct 
+### build the project with docker
+## => docker build -t docker_hub_username/proejct_name .
+## => docker push docker_hub_username/proejct_name
+## this will build the proejct and push to docker hub
+
+# Deploy 
+## => kubectl apply -f [depl-file-name.yaml]
+### restart the deployment
+## => kubectl rollout restart deployment [depl_name] i.e: auth-depl
+
+# Describe 
+### any service, pod, deployment
+## => kubectl describe [service name, depl name,....]
+
+# Secret
+### Create secret
+## => kubectl create secret generic jwt_secret[naem of the secret] --form-literal=JWT_KEY=asdf[all key value pair]
+
+## =>get secret
