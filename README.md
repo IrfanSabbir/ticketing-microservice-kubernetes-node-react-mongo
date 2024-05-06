@@ -53,3 +53,9 @@ chorme locally run issue
 ## => kubectl create secret generic jwt_secret[naem of the secret] --form-literal=JWT_KEY=asdf[all key value pair]
 
 ## =>get secret
+
+
+# port forwarding(can be sued with nets)
+
+## => kubectl port-forward nats-depl-84948864b6-pvcc9[any depl name] 4222:4222 [any request comes to 4222, will be redirected to 422]
+### After killing the terminal the port forwarding will be stopped.
