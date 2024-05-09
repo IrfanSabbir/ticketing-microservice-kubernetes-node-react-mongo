@@ -55,7 +55,7 @@ chorme locally run issue
 ## =>get secret
 
 
-# port forwarding(can be sued with nets)
+# port forwarding(can be used with nets)
 
 ## => kubectl port-forward nats-depl-84948864b6-pvcc9[any depl name] 4222:4222 [any request comes to 4222, will be redirected to 422]
 ### After killing the terminal the port forwarding will be stopped.
