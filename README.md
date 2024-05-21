@@ -50,7 +50,7 @@ chorme locally run issue
 
 # Secret
 ### Create secret
-## => kubectl create secret generic jwt_secret[naem of the secret] --form-literal=JWT_KEY=asdf[all key value pair]
+## => kubectl create secret generic jwt-secret[name of the secret] --form-literal=JWT_KEY=asdf[all key value pair]
 
 ## =>get secret
 
