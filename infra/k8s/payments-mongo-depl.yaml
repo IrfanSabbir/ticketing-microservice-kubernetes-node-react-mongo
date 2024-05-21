@@ -15,6 +15,11 @@ spec:
       containers:
         - name: payments-mongo
           image: mongo
+          # lifecycle:
+          #   postStart:
+          #     exec:
+          #       command: ["bash", "-c", "apt-get update && apt-get install -y mongodb-client"]
+
 ---
 apiVersion: v1
 kind: Service
